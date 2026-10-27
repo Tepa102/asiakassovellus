@@ -1,0 +1,50 @@
+doctype html
+html(lang="fi")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title= title
+    style.
+      body {
+        font-family: Times, sans-serif;
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+      nav a {
+        margin-right: 20px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th, td {
+        border: 1px solid #000;
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background: #87CEFA;
+      }
+      input {
+        display: block;
+        padding: 8px;
+        margin: 5px 0 15px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      button {
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+  body
+    h1 Asiakassovellus
+
+    nav
+      a(href="/customers") Asiakaslista
+      a(href="/customers/add") Lisää asiakas
+
+    hr
+
+    block content

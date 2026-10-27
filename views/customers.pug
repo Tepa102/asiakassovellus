@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h2 Kaikki asiakkaat
+
+  if customers.length > 0
+    table
+      thead
+        tr
+          th Etunimi
+          th Sukunimi
+          th Sähköposti
+          th Puhelin
+      tbody
+        each customer in customers
+          tr
+            td= customer.firstname
+            td= customer.lastname
+            td= customer.email
+            td= customer.phone
+  else
+    p Asiakkaita ei ole vielä lisätty.
+
+  p
+    a(href="/customers/add") Lisää asiakas
